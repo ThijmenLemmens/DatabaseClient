@@ -1,0 +1,21 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DatabaseClient.Views"
+             xmlns:Sub="clr-namespace:DatabaseClient.Views.Sub" x:Class="DatabaseClient.Views.MainSectionUserControl"
+             mc:Ignorable="d" 
+             Height="auto" d:DesignWidth="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Sub:ListCarCompanyUserControl Grid.Column="0" Height="220" Width="150" />
+        <Sub:ListCarsUserControl Grid.Column="1" Height="220" Width="80" />
+    </Grid>
+</UserControl>
