@@ -1,4 +1,6 @@
 ﻿using DatabaseClient.Models.Data;
+using DatabaseClient.Services.Data;
+using DatabaseClient.ViewModels.Sub.Create;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +16,10 @@ namespace DatabaseClient.ViewModels.Sub
 
         private Car _car;
 
+        private CarCompany _carCompany;
+
+        private Headquater _headquater;
+
         public Car Car
         {
             get => _car;
@@ -26,6 +32,21 @@ namespace DatabaseClient.ViewModels.Sub
                 }
             }
         }
+
+        private CarService _carService;
+        private CarCompanyService _carCompanyService;
+        private HeadquaterService _headquaterService;
+
+        public CarViewViewModel()
+        {
+            ListCarViewModel.ChangedCar += OnCarChanged;
+        }
+
+        public void OnCarChanged(Car car)
+        {
+            Car = _car;
+        }
+
 
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)

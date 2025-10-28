@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseClient.ViewModels.Sub;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,10 @@ namespace DatabaseClient.Views.Sub
         public CarViewUserControl()
         {
             InitializeComponent();
+
+            CarViewViewModel carViewViewModel = new();
+
+            DataContext = carViewViewModel;
         }
     }
 }

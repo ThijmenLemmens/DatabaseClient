@@ -5,8 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DatabaseClient.Views.Sub"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             Height="250" Width="200">
+    <StackPanel >
+
+        <Image Source="{Binding }" Height="100" Width="100"></Image>
+
+        <TextBox Text="{Binding Car.Name}" FontSize="24" FontWeight="SemiBold" />
+
+    </StackPanel>
 </UserControl>

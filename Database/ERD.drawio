@@ -1,0 +1,49 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="Page-1" id="afdGZXYwFwLrMhUs06Rw">
+    <mxGraphModel dx="1426" dy="849" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" source="SyIeJ_pSp-1_Gsyx6CoS-7" target="SyIeJ_pSp-1_Gsyx6CoS-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-7" value="&lt;b&gt;Country&lt;/b&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="390" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" source="SyIeJ_pSp-1_Gsyx6CoS-9" target="SyIeJ_pSp-1_Gsyx6CoS-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-9" value="&lt;b&gt;Headquaters&lt;/b&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="390" y="390" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" source="SyIeJ_pSp-1_Gsyx6CoS-10" target="SyIeJ_pSp-1_Gsyx6CoS-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-10" value="&lt;b&gt;Car Company&lt;/b&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="790" y="390" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-11" value="&lt;b&gt;Car&lt;/b&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1205" y="390" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;" edge="1" parent="1" source="SyIeJ_pSp-1_Gsyx6CoS-13" target="SyIeJ_pSp-1_Gsyx6CoS-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-13" value="Heeft" style="rhombus;" vertex="1" parent="1">
+          <mxGeometry x="240" y="370" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=ERmany;endFill=0;" edge="1" parent="1" source="SyIeJ_pSp-1_Gsyx6CoS-16" target="SyIeJ_pSp-1_Gsyx6CoS-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-16" value="Heeft" style="rhombus;" vertex="1" parent="1">
+          <mxGeometry x="610" y="370" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=ERmany;endFill=0;" edge="1" parent="1" source="SyIeJ_pSp-1_Gsyx6CoS-19" target="SyIeJ_pSp-1_Gsyx6CoS-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SyIeJ_pSp-1_Gsyx6CoS-19" value="Heeft" style="rhombus;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="370" width="70" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

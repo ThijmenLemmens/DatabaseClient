@@ -10,7 +10,7 @@
         Title="MainWindow" Height="500" Width="800">
     <StackPanel>
 
-        <Grid Height="235">
+        <Grid Height="250">
             <Views:MainSectionUserControl HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
         </Grid>
