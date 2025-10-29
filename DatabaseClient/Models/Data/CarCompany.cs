@@ -20,7 +20,7 @@ namespace DatabaseClient.Models.Data
         
         private string _name;
 
-        private byte[] _logoData;
+        private byte[]? _logoData;
 
         public int ID
         {
@@ -59,6 +59,8 @@ namespace DatabaseClient.Models.Data
 
             }
             get {
+
+                return null;
 
                 if (_logoData == null || _logoData.Length == 0)
                     return null;

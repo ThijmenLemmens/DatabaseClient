@@ -6,11 +6,40 @@
              xmlns:local="clr-namespace:DatabaseClient.Views.Sub"
              mc:Ignorable="d" 
              Height="250" Width="200">
-    <StackPanel >
+    <Border BorderBrush="LightGray" BorderThickness="1">
+        <StackPanel >
 
-        <Image Source="{Binding }" Height="100" Width="100"></Image>
+            <GroupBox Header="Car Company">
+                <StackPanel>
+                    <Image Source="{Binding }" Height="100" Width="100"></Image>
+                    <Label FontWeight="SemiBold" HorizontalAlignment="Center" Height="30" Content="{Binding CarCompany.Name}" />
+                </StackPanel>
+            </GroupBox>
+            
 
-        <TextBox Text="{Binding Car.Name}" FontSize="24" FontWeight="SemiBold" />
+            <GroupBox Header="Car Info">
+                <StackPanel>
+                    <TextBox Margin="5" Text="{Binding Car.Name}" FontSize="14" FontWeight="SemiBold" />
 
-    </StackPanel>
+                    <TextBox Margin="5" Text="{Binding DisplayValue}" FontSize="14" FontWeight="SemiBold" />
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <RadioButton Content="PK"
+                            IsChecked="{Binding IsPkSelected}"
+                            GroupName="PowerMode"
+                            Margin="0,0,10,0"/>
+                        <RadioButton Content="kW"
+                            IsChecked="{Binding IsKwSelected}"
+                            GroupName="PowerMode"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Headquaters">
+                <TextBox Margin="5" Text=""></TextBox>
+            </GroupBox>
+            
+
+        </StackPanel>
+        
+    </Border>
 </UserControl>

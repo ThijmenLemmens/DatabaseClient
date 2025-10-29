@@ -24,7 +24,7 @@ namespace DatabaseClient.Repositorys
         public int Create(Headquater model)
         {
             SqlParameter sqlParameterCity = new("@City", model.City);
-            SqlParameter sqlParameterCountry = new("@Country", model.Country);
+            SqlParameter sqlParameterCountry = new("@FKCountry", model.City);
 
             SqlParameter sqlParameterId = new("@NewId", SqlDbType.Int)
             {
@@ -50,7 +50,7 @@ namespace DatabaseClient.Repositorys
             List<Headquater> headquaters = new();
 
             while (reader.Read())
-                headquaters.Add(new(reader.GetInt32(0), reader.GetString(1), reader.GetString(2)));
+                headquaters.Add(new(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2)));
 
             return headquaters;
         }

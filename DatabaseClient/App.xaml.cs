@@ -28,6 +28,9 @@ namespace DatabaseClient
                    // Services
                    services.AddSingleton(new DatabaseService());
 
+                   services.AddScoped<ICountryRepository, CountryRepository>();
+                   services.AddScoped<CountryService>();
+
                    services.AddScoped<IHeadquatersRepository, HeadquatersRepository>();
                    services.AddScoped<HeadquaterService>();
 

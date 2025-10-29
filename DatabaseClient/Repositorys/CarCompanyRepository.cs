@@ -40,9 +40,23 @@ namespace DatabaseClient.Repositorys
             return result;
         }
 
-        public CarCompany Read(int id)
+        public CarCompany? Read(int id)
         {
-            throw new NotImplementedException();
+            SqlParameter sqlParameterId = new("@ID", id);
+
+            using SqlDataReader reader = _databaseService.ExecuteReader("sp_GetCarCompanyById", sqlParameterId);
+
+            if (reader.Read()) // <-- check of er een rij is
+            {
+                return new CarCompany(
+                    reader.GetInt32(0),                  
+                    reader.GetInt32(1),                       
+                    reader.GetString(2),                    
+                    reader.IsDBNull(3) ? null : reader.GetSqlBytes(3).Value 
+                );
+            }
+
+            return null;
         }
 
         public void Update(CarCompany model)
@@ -70,7 +84,7 @@ namespace DatabaseClient.Repositorys
             List<CarCompany> carCompanies = new();
 
             while (reader.Read())
-                carCompanies.Add(new(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetSqlBytes(3).Value));
+                carCompanies.Add(new(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), [0,0]));
 
             return carCompanies;
         }

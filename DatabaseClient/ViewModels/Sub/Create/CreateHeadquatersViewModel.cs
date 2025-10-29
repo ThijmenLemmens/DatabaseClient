@@ -19,10 +19,10 @@ namespace DatabaseClient.ViewModels.Sub.Create
     class CreateHeadquatersViewModel : INotifyPropertyChanged
     {
 
-        public ObservableCollection<string> Countries { get; } = new();
+        public ObservableCollection<Country> Countries { get; } = new();
 
         private string _city = string.Empty;
-        private string _country = string.Empty;
+        private Country _country;
 
         public string City
         {
@@ -37,7 +37,7 @@ namespace DatabaseClient.ViewModels.Sub.Create
             }
         }
 
-        public string Country
+        public Country Country
         {
             get => _country;
             set
@@ -54,22 +54,24 @@ namespace DatabaseClient.ViewModels.Sub.Create
         public ICommand ResetCommand { get; }
 
         private HeadquaterService _headquaterService;
+        private CountryService _countryService; 
 
         private IServiceProvider _serviceProvider = App.AppHost.Services;
 
         public CreateHeadquatersViewModel()
         {
             _headquaterService = _serviceProvider.GetRequiredService<HeadquaterService>();
+            _countryService = _serviceProvider.GetRequiredService<CountryService>();
 
             CreateCommand = new RelayCommand(OnCreate);
             ResetCommand = new RelayCommand(OnReset);
 
-            Countries = new ObservableCollection<string>(GetAllCountrys("Countrys.txt"));
+            Countries = new ObservableCollection<Country>(_countryService.GetAll());
         }
 
         private void OnCreate(object obj)
         {
-            Headquater headquater = new(_city, _country);
+            Headquater headquater = new(_city, _country.ID);
 
             int result = _headquaterService.Create(headquater);
 
@@ -84,19 +86,9 @@ namespace DatabaseClient.ViewModels.Sub.Create
             }
         }
 
-        private List<string> GetAllCountrys(string path)
-        {
-            string data = File.ReadAllText($"{AppContext.BaseDirectory}//{path}");
-
-            List<string> countrys = data.Split(',').ToList();
-
-            return countrys;
-        }
-
         private void OnReset(object? obj)
         {
             City = string.Empty;
-            Country = string.Empty;
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

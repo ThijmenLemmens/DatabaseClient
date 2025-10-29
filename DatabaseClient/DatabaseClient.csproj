@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <Folder Include="Helpers\" />
+    <Folder Include="ViewModels\Sub\Update\" />
+    <Folder Include="Views\Sub\Update\" />
   </ItemGroup>
 
 </Project>

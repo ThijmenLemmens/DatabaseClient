@@ -13,14 +13,14 @@ namespace DatabaseClient.Services
     {
 
         private const string _connectionString =
-             "Data Source=(localdb)\\MSSQLLocalDB;" +
+             "Server=THIJMEN\\SQLEXPRESS;" +
              "Initial Catalog=CarDatabase;" + // Make sure to specify your DB
              "Integrated Security=True;" +
              "Persist Security Info=False;" +
              "Pooling=True;" +  // Better performance with connection pooling
              "MultipleActiveResultSets=True;" +  // Optional, allows multiple DataReaders
              "Encrypt=False;" +  // Disable encryption for local connections
-             "TrustServerCertificate=True;" +  // Prevent certificate validation errors
+             "TrustServerCertificate=true;" +  // Prevent certificate validation errors
              "Application Name=DatabaseClient;" +
              "Command Timeout=30;";
 
@@ -71,7 +71,7 @@ namespace DatabaseClient.Services
                 return -1;
             }
 
-            using   SqlCommand cmd = new(procedureName, _sqlConnection);
+            using SqlCommand cmd = new(procedureName, _sqlConnection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddRange(parameters);
             

@@ -7,17 +7,19 @@
         xmlns:Views="clr-namespace:DatabaseClient.Views" x:Class="DatabaseClient.MainWindow"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="500" Width="800">
+        Title="MainWindow" Height="570" Width="800">
     <StackPanel>
 
-        <Grid Height="250">
+        <Grid Height="350">
             <Views:MainSectionUserControl HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
         </Grid>
 
-        <GroupBox Header="Create Section">
-            <Views:CreateUsercontrol HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        </GroupBox>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+            <GroupBox Header="Create Section" Width="300">
+                <Views:CreateUsercontrol HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            </GroupBox>
+        </StackPanel>
 
     </StackPanel>
 </Window>

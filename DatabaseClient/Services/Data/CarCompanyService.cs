@@ -30,6 +30,8 @@ namespace DatabaseClient.Services.Data
             return result;
         }
 
+        public CarCompany Read(int id) => _carCompanyRepository.Read(id);
+
         public List<CarCompany> GetAll() => _carCompanyRepository.GetAll();
     }
 }

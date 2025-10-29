@@ -32,7 +32,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Country:" VerticalAlignment="Center"/>
-                <ComboBox SelectedItem="{Binding Country}" ItemsSource="{Binding Countries}" x:Name="CountryComboBox" Grid.Column="1" Height="25"></ComboBox>
+                <ComboBox DisplayMemberPath="CountryName" SelectedItem="{Binding Country}" ItemsSource="{Binding Countries}" x:Name="CountryComboBox" Grid.Column="1" Height="25"></ComboBox>
             </Grid>
 
             <!-- Buttons -->

@@ -2,16 +2,61 @@
 USE CarDatabase;
 GO
 
+-- Country
+
+CREATE PROCEDURE sp_CreateCountry
+    @Name NVARCHAR(100),
+    @NewId INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO tblCountry (Name)
+    VALUES (@Name);
+
+    SET @NewId = SCOPE_IDENTITY();
+END;
+GO
+
+CREATE PROCEDURE sp_GetAllCountries
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        *
+    FROM 
+        tblCountry
+    ORDER BY 
+        Name;
+END;
+GO
+
+CREATE PROCEDURE sp_GetCountryByName
+    @Name NVARCHAR(100)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        *
+    FROM 
+        tblCountry
+    WHERE 
+        Name = @Name;
+END;
+GO
+
 -- Headquaters
 
 CREATE PROCEDURE sp_CreateHeadquater
     @City NVARCHAR(100),
-    @Country NVARCHAR(100),
+    @FkCountry NVARCHAR(100),
     @NewId INT OUTPUT
 AS
 BEGIN
-    INSERT INTO tblHeadquarters (HeadquartersCity, HeadquartersCountry)
-    VALUES (@City, @Country);
+    INSERT INTO tblHeadquarters (City, FK_Country)
+    VALUES (@City, @FkCountry);
 
     SET @NewId = SCOPE_IDENTITY();
 END;
@@ -27,7 +72,7 @@ BEGIN
     FROM 
         tblHeadquarters
     ORDER BY 
-        HeadquartersCity; 
+        City; 
 END;
 GO
 
@@ -44,6 +89,21 @@ BEGIN
     VALUES (@FkHeadquaters, @Name, @Logo);
 
     SET @NewId = SCOPE_IDENTITY();
+END;
+GO
+
+CREATE PROCEDURE sp_GetCarCompanyById
+    @ID INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        *
+    FROM 
+        tblCarCompany
+    WHERE 
+        ID = @ID;
 END;
 GO
 

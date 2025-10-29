@@ -33,9 +33,8 @@
                         <DataTemplate>
                             <TextBlock>
                                 <TextBlock.Text>
-                                    <MultiBinding StringFormat="{}{0}, {1}">
+                                    <MultiBinding StringFormat="{}{0}">
                                         <Binding Path="City"/>
-                                        <Binding Path="Country"/>
                                     </MultiBinding>
                                 </TextBlock.Text>
                             </TextBlock>

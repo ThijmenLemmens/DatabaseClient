@@ -13,7 +13,7 @@ namespace DatabaseClient.Models.Data
 
         private string _city;
 
-        private string _country;
+        private int _fkCountry;
 
         public int ID
         {
@@ -34,30 +34,30 @@ namespace DatabaseClient.Models.Data
             } 
         }
 
-        public string Country
+        public int FkCountry
         {
-            get => _country;
+            get => _fkCountry;
             set {
 
-                if (_country != value)
+                if (_fkCountry != value)
                 {
-                    _country = value;
+                    _fkCountry = value;
                 }
 
             }
         }
 
-        public Headquater(string city, string country)
+        public Headquater(string city, int fkCountry)
         {
             _city = city;
-            _country = country;
+            _fkCountry = fkCountry;
         }
 
-        public Headquater(int id, string city, string country)
+        public Headquater(int id, string city, int fkCountry)
         {
             _id = id;
             _city = city;
-            _country = country;
+            _fkCountry = fkCountry;
         }
     }
 }
